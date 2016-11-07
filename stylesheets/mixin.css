@@ -1,0 +1,66 @@
+body {
+  color: red;
+  font-size: 16px;
+}
+
+.shadows {
+  -moz-box-shadow: 0px 4px 4px #555, 2px 6px 10px #aaa;
+  -webkit-box-shadow: 0px 4px 4px #555, 2px 6px 10px #aaa;
+  box-shadow: 0px 4px 4px #555, 2px 6px 10px #aaa;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 580px) {
+  font-size: 12px;
+}
+@media only screen and (min-device-width: 780px) and (max-device-width: 1024px) {
+  font-size: 14px;
+}
+.fl {
+  float: left;
+  display: inline;
+}
+
+.btn,
+.btn-positive,
+.btn-negative,
+.btn-neutral {
+  display: inline-block;
+  padding: 1em;
+}
+
+.btn-positive {
+  background-color: green;
+  color: white;
+}
+
+.btn-negative {
+  background-color: red;
+  color: white;
+}
+
+.btn-neutral {
+  background-color: lightgray;
+  color: black;
+}
+
+.foo {
+  width: 50px;
+  height: 10px;
+  max-width: 100%;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+div {
+  color: blue;
+  border: 1px solid green;
+  float: right;
+}
+
+div {
+  color: red;
+  border: 1px solid red;
+  float: right;
+}

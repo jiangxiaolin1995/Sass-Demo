@@ -1,0 +1,71 @@
+body {
+  color: blue;
+}
+
+span {
+  color: green;
+}
+
+.span1 {
+  width: 20%;
+}
+
+.span2 {
+  width: 40%;
+}
+
+.span3 {
+  width: 60%;
+}
+
+.span4 {
+  width: 80%;
+}
+
+.span5 {
+  width: 100%;
+}
+
+p6 {
+  width: 120%;
+}
+
+p3 {
+  width: 60%;
+}
+
+.div1 {
+  color: blue;
+}
+
+.div2 {
+  color: red;
+}
+
+.div3 {
+  color: green;
+}
+
+.text-default {
+  color: blue;
+}
+
+.text-info {
+  color: green;
+}
+
+.text-danger {
+  color: red;
+}
+
+.lable-default {
+  color: blue;
+}
+
+.lable-info {
+  color: green;
+}
+
+.lable-danger {
+  color: red;
+}

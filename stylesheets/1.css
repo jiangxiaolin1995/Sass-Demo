@@ -1,0 +1,73 @@
+@charset "UTF-8";
+@import url(css.css);
+@import "http://sss/xxx";
+@import url(css.css);
+body {
+  font-family: 微软雅黑;
+}
+
+body {
+  color: red;
+  font-size: 14px;
+  padding: 5px 10px 5px 10px;
+  padding-left: 5px;
+}
+body a {
+  color: red;
+}
+body a:hover {
+  color: blue;
+}
+body a.main {
+  color: red;
+}
+.con {
+  width: 1104px;
+}
+.container {
+  background: red;
+}
+
+footer {
+  background-color: red;
+  background-size: 100%;
+  color: red;
+  background-color: red;
+  border-color: blue;
+}
+
+.main {
+  width: 100px;
+  height: 100px;
+}
+
+.text-info {
+  color: red;
+}
+nav .text-info {
+  color: blue;
+}
+
+/*继承与多继承*/
+.alert-info {
+  background-color: red;
+}
+
+.small, .alert-info {
+  font-size: 12px;
+}
+
+.alert-info {
+  color: blue;
+}
+
+/*链式继承*/
+.two {
+  color: red;
+}
+
+@media screen and (max-width：600px) {
+  .two2, .text {
+    color: red;
+  }
+}

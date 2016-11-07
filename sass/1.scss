@@ -1,0 +1,104 @@
+@import "css.css";
+@import "http://sss/xxx";
+@import url(css.css);
+@import "part1";
+
+
+$fontSize:14px;
+$fontSize:12px !default;
+$paddings:5px 10px 5px 10px;
+$maps:(color:red,borderColor:blue);
+$className:main;
+body{
+  $color: red !global;  // $color为局部变量 所以在 footer中访问不到
+  color: $color;
+  font-size: $fontSize;
+  padding: $paddings;
+  padding-left: nth($paddings, 1);
+  a{
+    color: red;
+    &:hover{
+      color: blue;
+    }
+    &.main{
+      color: red;
+    }
+  }
+
+  @at-root .con{
+    width: 1104px;
+  }
+  @media screen and (max-width:600px){
+    @at-root (without: media rule){
+      .container{
+        background: red;
+      }
+    }
+  }
+
+}
+footer{
+  background: {
+    color: red;
+    size:100%
+  }
+  color: $color;
+  background-color: map-get($maps,color);
+  border-color: map-get($maps,borderColor)
+}
+.#{$className}{
+  width: 100px;
+  height: 100px;
+}
+.text-info{
+  color: red;
+  @at-root nav &{
+    color: blue;
+  }
+}
+/*继承与多继承*/
+%alert{
+
+  background-color: red;
+
+}
+
+.small{
+  font-size: 12px;
+}
+.alert-info{
+  @extend  %alert,.small;
+  //@extend  .small;
+  color: blue;
+
+}
+/*链式继承*/
+// .one{
+//   border: 1px solid red;
+// }
+.two{
+
+  color: red;
+
+}
+// .three{
+//   @extend .two;
+//   color: blue;
+// }
+
+// .one a{
+//   font-weight: bold;
+// }
+// .two .three{
+//   @extend a;
+// }
+
+@media screen and(max-width：600px){
+  .two2{
+    color: red;
+  }
+  .text{
+    @extend .two2;
+  }
+
+}

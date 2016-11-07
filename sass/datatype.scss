@@ -1,0 +1,60 @@
+/*数据类型*/
+$n1:1.2;
+$n2:12;
+$n3:14px;
+p{
+  font-size: $n3;
+}
+/*字符串类型*/
+$s1:container;
+$s2:'container';
+$s3:"container";
+.#{$s3}{
+  font-size: $n3;
+}
+/*bool类型*/
+$bt:ture;
+$bf:false;
+/*null类型*/
+$null:null;
+body{
+  @if $null == null{
+    color: red;
+  }
+}
+/*color类型*/
+$c1:blue;
+$c2:#fff;
+$c3:rgba(255,255,0,0.5);
+body{
+  color: $c3;
+}
+$width1:10px;
+$width2:15px;
+span{
+  width: $width1 + $width2;
+
+}
+a:hover{
+  cursor: e + -resize;
+}
+a:before{
+  content:"a" + bc;
+}
+p{
+  padding: 3px + 4px auto;
+}
+$version:3;
+p:before{
+  content: 'hello,sass #{$version}';
+  //如果要在字符串中使用变量 要加 #{}
+}
+p{
+  font: 10px / 5px;
+  font: $width2 / 2;
+  width: round($width2) / 2;
+  //round()函数将一个数四舍五入为一个最接近的整数，在round()函数中可以携带单位的任何数值。
+  height: (100px / 2);
+  //注意事项 运算符尽量用运算符隔开
+  //如果运算单位不一致会报错
+}

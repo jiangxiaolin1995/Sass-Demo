@@ -1,0 +1,26 @@
+@function double($width){
+  @return $width * 2;
+}
+body{
+  /*rgb() rgba()*/
+  $color: rgb(255,0,255);
+  color: $color;
+  background-color: rgba($color, 0.5);
+  /*lighten() darken ()*/
+  p{
+    color: darken($color, 0.5);
+    /*z-index: str-length('aaa');*/
+    z-index: str-index('abcd', 'b');
+    width: double(5px);
+  }
+}
+
+@function getIndex($layer){
+  $zindexMap:(default:1 ,modal:1000, dropdown:500, grid:300);
+  $zindex: 1;
+  @if map-has-key($zindexMap , $layer){
+    $zindex: map-get($zindexMap , $layer);
+  }
+  @return $zindex ;
+}
+@debug getIndex('ss');
